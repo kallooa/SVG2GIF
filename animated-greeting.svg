@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:1" />
+      <animate attributeName="x1" values="0%;100%;0%" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;0%;100%" dur="10s" repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main text with gradient fill -->
+  <text x="250" y="60" 
+        font-family="Arial, sans-serif" 
+        font-size="32" 
+        text-anchor="middle" 
+        fill="url(#bgGradient)"
+        font-weight="bold">
+    Good Morning Shreya!
+    
+    <!-- Fade in animation -->
+    <animate attributeName="opacity"
+             values="0;1"
+             dur="2s"
+             begin="0s"
+             fill="freeze" />
+             
+    <!-- Gentle bounce animation -->
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0 0; 0 -10; 0 0"
+                      dur="2s"
+                      begin="2s"
+                      repeatCount="indefinite" />
+  </text>
+
+  <!-- Decorative underline -->
+  <path d="M100 70 L400 70" 
+        stroke="url(#bgGradient)" 
+        stroke-width="3" 
+        fill="none">
+    <!-- Draw line animation -->
+    <animate attributeName="stroke-dasharray"
+             values="0,300;300,0"
+             dur="2s"
+             begin="0.5s"
+             fill="freeze" />
+  </path>
+</svg>
