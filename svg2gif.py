@@ -156,4 +156,4 @@ if USE_TMP_PATH:
 shutil.rmtree("_screenshots")
 
 #Optional delete of selenium logs
-os.remove(f"geckodriver.log")
+#os.remove(f"geckodriver.log")

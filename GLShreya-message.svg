@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+    <!-- Definitions for gradients and patterns -->
+    <defs>
+        <!-- Animated gradient for text -->
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1">
+                <animate attributeName="stop-color" 
+                    values="#FF6B6B;#4ECDC4;#FF6B6B" 
+                    dur="4s" 
+                    repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:1">
+                <animate attributeName="stop-color" 
+                    values="#4ECDC4;#FF6B6B;#4ECDC4" 
+                    dur="4s" 
+                    repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+
+        <!-- Animated gradient for border -->
+        <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:1">
+                <animate attributeName="stop-color" 
+                    values="#4ECDC4;#FF6B6B;#4ECDC4" 
+                    dur="4s" 
+                    repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:1">
+                <animate attributeName="stop-color" 
+                    values="#FF6B6B;#4ECDC4;#FF6B6B" 
+                    dur="4s" 
+                    repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+    </defs>
+
+    <!-- Decorative Border -->
+    <rect x="65" y="40" width="670" height="220" 
+        fill="none" 
+        stroke="url(#borderGradient)" 
+        stroke-width="3" 
+        rx="20" 
+        ry="20">
+        <!-- Border draw animation -->
+        <animate attributeName="stroke-dasharray"
+            values="0,1400;1400,0"
+            dur="3s"
+            begin="0s"
+            fill="freeze"/>
+        <!-- Gentle pulse animation -->
+        <animate attributeName="stroke-width"
+            values="3;4;3"
+            dur="2s"
+            begin="3s"
+            repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Main message -->
+    <text x="400" y="100" 
+        font-family="Arial, sans-serif" 
+        font-size="36" 
+        text-anchor="middle" 
+        fill="url(#textGradient)"
+        font-weight="bold">
+        Good luck with Packing, Shreya!
+        
+        <!-- Fade in animation -->
+        <animate attributeName="opacity"
+            values="0;1"
+            dur="1s"
+            begin="0s"
+            fill="freeze"/>
+    </text>
+
+    <!-- Encouraging message -->
+    <text x="400" y="160" 
+        font-family="Arial, sans-serif" 
+        font-size="32" 
+        text-anchor="middle" 
+        fill="url(#textGradient)">
+        You can do it!
+        
+        <!-- Bounce animation -->
+        <animateTransform attributeName="transform"
+            type="translate"
+            values="0 0; 0 -10; 0 0"
+            dur="1.5s"
+            begin="1s"
+            repeatCount="indefinite"/>
+    </text>
+
+    <!-- Box emoji (📦) -->
+    <text x="300" y="220" 
+        font-family="Arial, sans-serif" 
+        font-size="40" 
+        text-anchor="middle">
+        📦
+        <animateTransform attributeName="transform"
+            type="rotate"
+            values="0 300 220; 10 300 220; -10 300 220; 0 300 220"
+            dur="2s"
+            repeatCount="indefinite"/>
+    </text>
+
+    <!-- Star emoji (⭐) -->
+    <text x="400" y="220" 
+        font-family="Arial, sans-serif" 
+        font-size="40" 
+        text-anchor="middle">
+        ⭐
+        <animate attributeName="opacity"
+            values="0.4;1;0.4"
+            dur="1.5s"
+            repeatCount="indefinite"/>
+    </text>
+
+    <!-- Sparkles emoji (✨) -->
+    <text x="500" y="220" 
+        font-family="Arial, sans-serif" 
+        font-size="40" 
+        text-anchor="middle">
+        ✨
+        <animateTransform attributeName="transform"
+            type="scale"
+            values="1;1.2;1"
+            dur="2s"
+            repeatCount="indefinite"/>
+    </text>
+</svg>
